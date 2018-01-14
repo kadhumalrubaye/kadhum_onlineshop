@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "kadhum_onlineshop", "kadhum_onlineshop\", "{E0022C10-8A3C-4E89-870A-A682E70F1D47}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52184"
+		Debug.AspNetCompiler.PhysicalPath = "kadhum_onlineshop\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52184\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52184"
+		Release.AspNetCompiler.PhysicalPath = "kadhum_onlineshop\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52184\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52184"
+		SlnRelativePath = "kadhum_onlineshop\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0022C10-8A3C-4E89-870A-A682E70F1D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0022C10-8A3C-4E89-870A-A682E70F1D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B6F790E-D084-4B8C-9277-3E63734C8C68}
+	EndGlobalSection
+EndGlobal

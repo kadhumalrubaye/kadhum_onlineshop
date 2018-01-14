@@ -1,0 +1,82 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>kadhumProject</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>CSharp</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>kadhumProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ProjectName.webproj" File="ProjectName.webproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="adminCategory.aspx">adminCategory.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="adminCategory.aspx.cs">adminCategory.aspx.cs</ProjectItem>
+      <Folder Name="App_Code" TargetFolderName="App_Code">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Category.cs">Category.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="database_hundler.cs">database_hundler.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainTable.cs">MainTable.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Member.cs">Member.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="mSearch.cs">mSearch.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="mUtility.cs">mUtility.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Order.cs">Order.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderDetails.cs">OrderDetails.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Product.cs">Product.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="user.cs">user.cs</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data" TargetFolderName="App_Data" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="default.css">default.css</ProjectItem>
+      <Folder Name="images" TargetFolderName="images">
+        <ProjectItem ReplaceParameters="false" TargetFileName="img01.jpg">img01.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img02.gif">img02.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img02.jpg">img02.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img03.jpg">img03.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img04.jpg">img04.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img05.jpg">img05.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="img06.jpg">img06.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="loginphoto.png">loginphoto.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="pro.jpg">pro.jpg</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="loginPage.aspx">loginPage.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="loginPage.aspx.cs">loginPage.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="logoutPage.aspx">logoutPage.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="logoutPage.aspx.cs">logoutPage.aspx.cs</ProjectItem>
+      <Folder Name="product items" TargetFolderName="product items">
+        <ProjectItem ReplaceParameters="false" TargetFileName="dell.jpg">dell.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dell3.jpg">dell3.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dellm.jpg">dellm.jpg</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Product_detaile.aspx">Product_detaile.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Product_detaile.aspx.cs">Product_detaile.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Registration.aspx">Registration.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Registration.aspx.cs">Registration.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="search.aspx">search.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="search.aspx.cs">search.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SitMasterPage.master">SitMasterPage.master</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SitMasterPage.master.cs">SitMasterPage.master.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="style.css">style.css</ProjectItem>
+      <Folder Name="userControls" TargetFolderName="userControls">
+        <ProjectItem ReplaceParameters="true" TargetFileName="LoginWebUserControl.ascx">LoginWebUserControl.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LoginWebUserControl.ascx.cs">LoginWebUserControl.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RegistrWebUserControl.ascx">RegistrWebUserControl.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RegistrWebUserControl.ascx.cs">RegistrWebUserControl.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="searchWebUserControl.ascx">searchWebUserControl.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="searchWebUserControl.ascx.cs">searchWebUserControl.ascx.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserInfoWebUserControl.ascx">UserInfoWebUserControl.ascx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserInfoWebUserControl.ascx.cs">UserInfoWebUserControl.ascx.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="userInfirmation.aspx">userInfirmation.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="userInfirmation.aspx.cs">userInfirmation.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="userInfo.aspx">userInfo.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="userInfo.aspx.cs">userInfo.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

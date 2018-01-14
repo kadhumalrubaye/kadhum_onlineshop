@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SitMasterPage.master.cs" Inherits="SitMasterPage"  %>
+
+<%@ Register Src="~/userControls/categoryWebUserControl.ascx" TagPrefix="uc1" TagName="categoryWebUserControl" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>online shopping</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<%--    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>--%>
+
+<%--      <link rel="stylesheet" href="css/paystyle.css">--%>
+        <link href="css/paystyle.css" rel="stylesheet" />
+<link href="mydefault.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+    <%if (Session["user"] != null) { login_link.Visible = false; userInfo.Visible = true; }
+        else if  (Session["admin"] != null) { adminPage.Visible = true; login_link.Visible = false; userinf_link.Visible = false; userInfo.Visible = true; }
+        else { logiut_link.Visible = false; userinf_link.Visible = false; userInfo.Visible = false; } %>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="#"><span>Online</span> shope</a></h1>
+		<p>&nbsp;</p>
+	</div>
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="Default.aspx">Homepage</a></li>
+			<li><a href="Default.aspx">Products</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a  runat="server" id="login_link" href="loginPage.aspx">Login</a></li>
+            <li><a runat="server" id="logiut_link" href="logoutPage.aspx">Logout</a></li>
+               <li><a runat="server" id="cart" href="Registration.aspx">Registration </a></li>
+		</ul>
+		<ul id="feed">
+		
+		</ul>
+	</div>
+	
+</div>
+<!-- end header -->
+<div id="wrapper">
+	<!-- start page -->
+    <form  runat="server">
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+				<li id="userInfo" runat="server">
+					<h2>user Information</h2>
+                    
+					<ul>
+						<li><a href="Default.aspx">home</a></li>
+						<li id="rrr" runat="server" visible="false"></li>
+                        						<li id="adminPage" runat="server" visible="false"><a href="adminP.aspx">admin page</a></li>
+
+						<li><a runat="server" id="userinf_link" href="userInfirmation.aspx">user information</a></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						
+					</ul>
+				</li>
+				<li>
+					<h2>Recent Added</h2>
+                    <br />
+					<ul>
+                        <div class="lastAdded">
+                            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" CellPadding="3">
+                                <ItemTemplate>
+                                    <a href="Product_detaile.aspx?id=<%#Eval("proID") %>">
+                                    &nbsp;<asp:Label ID="proNameLabel" runat="server" Text='<%# Eval("proName") %>' />
+                                        </a>
+                                  
+                                   <br />
+                                      ........................
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbConnectionString %>" SelectCommand="SELECT [proName], [proID] FROM [product] ORDER BY [WrittingDate] DESC"></asp:SqlDataSource>
+                        </div>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Categories</h2>
+                    <br />
+					<ul>
+                        <br />
+                        <%--<div class="sidebar">--%>
+                        <uc1:categoryWebUserControl runat="server" ID="categoryWebUserControl" />
+                    <%--</div>--%>
+					
+					</ul>
+				</li>
+				<li>
+					<h2>Archives</h2>
+					<ul>
+						<li><a href="#">September</a> (23)</li>
+						<li><a href="#">August</a> (31)</li>
+						<li><a href="#">July</a> (31)</li>
+						<li><a href="#">June</a> (30)</li>
+						<li><a href="#">May</a> (31)</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- start content -->
+		<div id="content">
+			
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+				<li>
+					<form id="searchform" method="get" action="#">
+						<div>
+							<h2>Site Search</h2>
+                            <br />
+                            <asp:TextBox ID="searchTextBox1" runat="server"></asp:TextBox>
+                            <asp:Button ID="Button1"  runat="server" Text="Button" OnClick="Button1_Click" />
+						</div>
+					</form>
+				</li>
+				
+					<%--<h2>Categories</h2>
+					<ul>
+						<li><a href="#">Aliquam libero</a></li>
+						<li><a href="#">Consectetuer adipiscing elit</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+						<li><a href="#">Suspendisse iaculis mauris</a></li>
+						<li><a href="#">Urnanet non molestie semper</a></li>
+						<li><a href="#">Proin gravida orci porttitor</a></li>
+						<li><a href="#">Aliquam libero</a></li>
+						<li><a href="#">Consectetuer adipiscing elit</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+						<li><a href="#">Urnanet non molestie semper</a></li>
+						<li><a href="#">Proin gravida orci porttitor</a></li>
+						<li><a href="#">Aliquam libero</a></li>
+						<li><a href="#">Consectetuer adipiscing elit</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+						<li><a href="#">Suspendisse iaculis mauris</a></li>
+						<li><a href="#">Urnanet non molestie semper</a></li>
+						<li><a href="#">Proin gravida orci porttitor</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+						<li><a href="#">Suspendisse iaculis mauris</a></li>
+						<li><a href="#">Urnanet non molestie semper</a></li>
+						<li><a href="#">Proin gravida orci porttitor</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+					</ul>--%>
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+        </form>
+</div>
+<div id="footer">
+	<p class="copyright">&copy;&nbsp;&nbsp;2009 All Rights Reserved &nbsp;&bull;&nbsp; Design bykadhum alrubaye.</p>
+	
+</div>
+<div align=center>by kadhum alrubaye</div></body>
+</html>
+
