@@ -63,8 +63,10 @@ public class database_hundler
         con.Close();
         return dt;
     }
+    
     public bool loginCheker(string name, string password)
     {
+       
         SqlConnection con = new SqlConnection(constr);
         string check = "select * from  users where username ='" + name + "' and passowrd ='" + password + "'";
         DataTable dt = sqlcmnd_select(check);
@@ -72,6 +74,18 @@ public class database_hundler
             return true;
         else
             return false;
+    }
+    public int getUserID(string name)
+    {
+        int vla = 0;
+        DataTable dt = new DataTable();
+       
+            dt = sqlcmnd_select("select* from users where username = '" + name + "'");
+        vla =((int) dt.Rows[0][10]);
+       
+            
+
+        return vla;
     }
     public bool adminLogin(string name, string password)
     {

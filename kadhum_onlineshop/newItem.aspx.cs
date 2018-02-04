@@ -52,7 +52,7 @@ public partial class newItem : System.Web.UI.Page
         pro.Price = priceTXT.Text;
         pro.Description = discreption.Text;
         pro.Avqty = avqtxt.Text;
-        pro.Proid = ProductITXTD.Text;
+        //pro.Proid = ProductITXTD.Text;
         pro.Creatontime1 = DateTime.Now.ToString();
         pro.Catno = DropDownList1.SelectedValue;
         inserImg();

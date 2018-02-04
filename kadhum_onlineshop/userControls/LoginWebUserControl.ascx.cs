@@ -8,7 +8,8 @@ using System.Web.UI.WebControls;
 public partial class userControls_LoginWebUserControl : System.Web.UI.UserControl
 {
     mUtility u = new mUtility();
-    Member m = new Member();
+   
+    
     database_hundler db = new database_hundler();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -31,7 +32,15 @@ public partial class userControls_LoginWebUserControl : System.Web.UI.UserContro
 
         if (db.loginCheker(usernameTextBox1.Text, passowrdTextBox2.Text))
         {
+           
+            int userID = 0;
+          
             Session["user"] = usernameTextBox1.Text;
+            
+            userID = db.getUserID(usernameTextBox1.Text);
+            Session["userID"] = userID;
+            Member.SessionState = userID;
+            //m.setMember(userID);
             u.creatCocki("user", new string[] { "user", "pass" }, new string[] { usernameTextBox1.Text, passowrdTextBox2.Text }, !RememberMeCheckBox1.Checked, Response);
             Response.Redirect("Default.aspx?user=" + usernameTextBox1.Text + "");
         }

@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SitMasterPage.master" AutoEventWireup="true" CodeFile="AdminUsers.aspx.cs" Inherits="userControls_AdminUsers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="username" DataSourceID="usersSqlDataSource1" ForeColor="#333333" GridLines="None">
-    <AlternatingRowStyle BackColor="White" />
+    <div class="proSercjResult ">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="username" DataSourceID="usersSqlDataSource1" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px">
     <Columns>
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         <asp:BoundField DataField="username" HeaderText="username" ReadOnly="True" SortExpression="username" />
         <asp:BoundField DataField="passowrd" HeaderText="passowrd" SortExpression="passowrd" />
         <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
@@ -15,17 +16,17 @@
         <asp:BoundField DataField="quastiion" HeaderText="quastiion" SortExpression="quastiion" />
         <asp:BoundField DataField="answer" HeaderText="answer" SortExpression="answer" />
     </Columns>
-    <EditRowStyle BackColor="#2461BF" />
-    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#EFF3FB" />
-    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-    <SortedAscendingCellStyle BackColor="#F5F7FB" />
-    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-    <SortedDescendingCellStyle BackColor="#E9EBEF" />
-    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+    <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+    <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+    <RowStyle BackColor="White" ForeColor="#330099" />
+    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+    <SortedAscendingCellStyle BackColor="#FEFCEB" />
+    <SortedAscendingHeaderStyle BackColor="#AF0101" />
+    <SortedDescendingCellStyle BackColor="#F6F0C0" />
+    <SortedDescendingHeaderStyle BackColor="#7E0000" />
 </asp:GridView>
+    </div>
 <asp:SqlDataSource ID="usersSqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbConnectionString %>" DeleteCommand="DELETE FROM [users] WHERE [username] = @username" InsertCommand="INSERT INTO [users] ([username], [passowrd], [name], [email], [phone], [company], [gender], [birth_date], [quastiion], [answer]) VALUES (@username, @passowrd, @name, @email, @phone, @company, @gender, @birth_date, @quastiion, @answer)" SelectCommand="SELECT * FROM [users]" UpdateCommand="UPDATE [users] SET [passowrd] = @passowrd, [name] = @name, [email] = @email, [phone] = @phone, [company] = @company, [gender] = @gender, [birth_date] = @birth_date, [quastiion] = @quastiion, [answer] = @answer WHERE [username] = @username">
     <DeleteParameters>
         <asp:Parameter Name="username" Type="String" />

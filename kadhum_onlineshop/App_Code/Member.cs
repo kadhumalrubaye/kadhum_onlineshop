@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 /// <summary>
 /// Summary description for Member
 /// </summary>
 public class Member:MainTable
 {
-   
+    private string _memberID;
+    private static int sessionState;
     private string _username;
     private string _password;
     private string _name;
@@ -21,6 +24,7 @@ public class Member:MainTable
     private string _quastion;
     private string _answer;
 
+   
     public string Answer
     {
         get { return _answer; }
@@ -71,10 +75,40 @@ public class Member:MainTable
         get { return _phone; }
         set { _phone = value; }
     }
-	public Member()
+
+    public string MemberID
+    {
+        get
+        {
+            return _memberID;
+        }
+
+        set
+        {
+            _memberID = value;
+        }
+    }
+
+    public static int SessionState
+    {
+        get
+        {
+            return sessionState;
+        }
+
+        set
+        {
+            sessionState = value;
+        }
+    }
+
+    public Member()
 	{
-		
-	}
+        setMember(sessionState);
+
+
+
+    }
     public string Register(string username,string password,string name,string birh_date,string email,string phone,string company,string gender,string quastion,string answer){
         this.Username = username;
         this.Password = password;
@@ -113,5 +147,24 @@ public class Member:MainTable
         else return false;
 
     }
+    public void setMember(int user_id)
+    {
+        DataTable dt = new DataTable();
+string querey="select * from users where userID='" + user_id + "'";
+      dt=  db.sqlcmnd_select(querey);
+      _memberID=  dt.Rows[0][10].ToString();
+        _name= dt.Rows[0][2].ToString();
+        _password= dt.Rows[0][1].ToString();
+        _email= dt.Rows[0][3].ToString();
+        _phone = dt.Rows[0][4].ToString();
+        _company = dt.Rows[0][5].ToString();
+        _gender = _email = dt.Rows[0][6].ToString();
+        _birth_date = _email = dt.Rows[0][7].ToString();
+
+
+
+
+
 
     }
+}

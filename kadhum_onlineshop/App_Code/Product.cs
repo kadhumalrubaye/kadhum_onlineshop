@@ -151,7 +151,7 @@ public class Product:MainTable
 
         sL.Add("@check", typeOfOperation);
         sL.Add("@catNo", Catno);
-        sL.Add("@proID", Proid);
+        //sL.Add("@proID", Proid);
         sL.Add("@proName", Proname);
         sL.Add("@price", Price);
         sL.Add("@AvQty", Avqty);

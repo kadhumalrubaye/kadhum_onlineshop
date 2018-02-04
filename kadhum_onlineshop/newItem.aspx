@@ -19,11 +19,11 @@
             </td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <%--<td>&nbsp;</td>
             <td>Product ID</td>
             <td>
                 <asp:TextBox ID="ProductITXTD" runat="server"></asp:TextBox>
-            </td>
+            </td>--%>
         </tr>
         <tr>
             <td>&nbsp;</td>

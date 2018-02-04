@@ -6,9 +6,14 @@
 </style>
 
 
+<div>
+    <h1>
+       <asp:Label ID="lblbl" runat="server"></asp:Label>
+         <asp:Label ID="lblbl2" runat="server"></asp:Label>
+    </h1>
+</div>
 
-
-<asp:FormView ID="FormView1" runat="server" DataKeyNames="username" DataSourceID="SqlDataSource1">
+<asp:FormView ID="FormView1" runat="server" DataKeyNames="username" DataSourceID="SqlDataSource1" OnPageIndexChanging="FormView1_PageIndexChanging">
     <EditItemTemplate>
         username:
         <asp:Label ID="usernameLabel1" runat="server" Text='<%# Eval("username") %>' />

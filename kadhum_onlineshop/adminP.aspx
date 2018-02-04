@@ -23,7 +23,7 @@
         <tr>
             <td style="text-align: center">MANAGE USERS</td>
             <td style="text-align: center">&nbsp;
-                <a href="userControls/AdminUsers.aspx">userControls/AdminUsers.aspx</a>
+                <a href="AdminUsers.aspx">AdminUsers.aspx</a>
             </td>
             <td style="text-align: center">&nbsp;</td>
         </tr>

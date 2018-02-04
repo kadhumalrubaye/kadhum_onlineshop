@@ -51,7 +51,10 @@
         </tr>
     </table>
     <div>
-                        <asp:Button ID="Button1" PostBackUrl="~/paymentPage.aspx" runat="server" Text="  Bay" Height="39px" Width="190px" />
+                        
+            
+        <asp:Button ID="Button2" runat="server" Text="Button"  PostBackUrl="~/CartPage.aspx"/>
+                        
             
     </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mydbConnectionString %>" SelectCommand="SELECT [CatNo], [ProId], [OrderNo], [quantity], [SellPrice] FROM [OrderDetailes]"></asp:SqlDataSource>
