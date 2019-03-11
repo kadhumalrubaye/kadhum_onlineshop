@@ -130,7 +130,7 @@
 							<h2>Site Search</h2>
                             <br />
                             <asp:TextBox ID="searchTextBox1" runat="server"></asp:TextBox>
-                            <asp:Button ID="Button1"  runat="server" Text="Button" OnClick="Button1_Click" />
+                            <asp:Button ID="Button1"  runat="server" Text="search" OnClick="Button1_Click" />
 						</div>
 					</form>
 				</li>

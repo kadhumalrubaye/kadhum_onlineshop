@@ -11,6 +11,7 @@ using System.Web.SessionState;
 /// </summary>
 public class Member:MainTable
 {
+    database_hundler db;
     private string _memberID;
     private static int sessionState;
     private string _username;
@@ -104,6 +105,7 @@ public class Member:MainTable
 
     public Member()
 	{
+        db = new database_hundler();
         setMember(sessionState);
 
 

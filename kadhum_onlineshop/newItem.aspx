@@ -70,10 +70,10 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Label ID="msgLabel1" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="msgLabel1" runat="server" Text=""></asp:Label>
             </td>
             <td>
-                <asp:Button ID="okButton1" runat="server" Text="Button" OnClick="okButton1_Click" />
+                <asp:Button ID="okButton1" runat="server" Text="add" OnClick="okButton1_Click" />
             </td>
         </tr>
         <tr>

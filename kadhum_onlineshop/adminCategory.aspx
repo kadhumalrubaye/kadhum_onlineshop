@@ -67,10 +67,9 @@
                     <td colspan="2" style="height: 23px; text-align: center">product category</td>
                 </tr>
                 <tr>
-                    <td style="text-align: left; width: 215px">category number</td>
+                    <td style="text-align: left; width: 215px">&nbsp;</td>
                     <td>
-                        <asp:TextBox ID="catNoTextBox1" runat="server"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td style="text-align: left; width: 215px">category name</td>
@@ -79,22 +78,17 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 215px">category title</td>
-                    <td>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
                     <td style="width: 215px">category description</td>
                     <td>
-                        <asp:TextBox ID="catDecTextBox3" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="catDecTextBox3" runat="server" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 215px">category image</td>
-                    <td>
-                        <asp:FileUpload ID="catFileUpload1" runat="server" />
+                    <td style="width: 215px">
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td style="width: 215px">&nbsp;</td>

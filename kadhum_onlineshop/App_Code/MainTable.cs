@@ -12,9 +12,9 @@ public abstract class MainTable
 {
    protected string procedureName;
 
-   protected database_hundler db = new database_hundler();
 
-    public virtual bool LoadProparties2params(string typeOfOperation){
+    public virtual bool LoadProparties2params(string typeOfOperation)
+    {
 
         return false;
 }

@@ -11,11 +11,11 @@ using System.Web;
 public class Category:MainTable
 {
     private database_hundler db;
-    private string _CatNo;
+    private int _CatNo;
     private string _CatName;
     private string _CatDescription;
 
-    public string CatNo
+    public int CatNo
     {
         get { return _CatNo; }
         set { _CatNo = value; }
@@ -31,36 +31,36 @@ public class Category:MainTable
 	{
         db = new database_hundler();
     }
-    public global::Product product
+    //public global::Product product
+    //{
+    //    get
+    //    {
+    //        return null;
+    //    }
+    //    set
+    //    {
+    //        value = value;
+    //    }
+    //}
+
+    public string CatDescription
     {
         get
         {
-            return null;
+            return _CatDescription;
         }
+
         set
         {
-            value = value;
+            _CatDescription = value;
         }
     }
 
-    public override bool LoadProparties2params(string typeOfOperation)
-    {
-        SortedList sL = new SortedList();
-        
-        sL.Add("@check", typeOfOperation);
-        sL.Add("@CatNo", _CatNo);
-        sL.Add("@CatName", _CatName);
-        sL.Add("@des", _CatDescription);
-        procedureName = "ManageCategory";
-        if (db.RunProcedure(procedureName, sL) == 1) return true;
-        else return false;
-        
-    }
-    public string addCat(string catName, string catNo, string catDes)
+    public string addCat(string catName, string catDes)
     {
         this.CatName = catName;
-        this.CatNo = catNo;
-        this._CatDescription = catDes;
+
+        this.CatDescription = catDes;
         if (add())
             return "category added successfully";
 
@@ -68,6 +68,25 @@ public class Category:MainTable
 
             return "category not added ..!!";
     }
+
+
+    public override bool LoadProparties2params(string typeOfOperation)
+    {
+        SortedList sL2 = new SortedList();
+        
+        sL2.Add("@check", typeOfOperation);     
+        sL2.Add("@CatName", CatName);
+        sL2.Add("@des", CatDescription);
+
+        procedureName = "ManageCategory";
+
+        if (db.RunProcedure(procedureName, sL2) == 1)
+            return true;
+        else
+            return false;
+        
+    }
+    
 
 
     public DataTable userSearch(string filed, string vlau)
@@ -84,5 +103,6 @@ public class Category:MainTable
 
     }
 
-   
+
+  
 }

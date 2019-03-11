@@ -9,7 +9,7 @@ using System.Web;
 /// </summary>
 public class OrderDetails:MainTable
 {
-    
+    database_hundler db;
     private string _CatNo;
     private string _proid;
     private int _orderno;
@@ -21,6 +21,7 @@ public class OrderDetails:MainTable
 
 	public OrderDetails()
 	{
+        db = new database_hundler();
 		//
 		// TODO: Add constructor logic here
 		//

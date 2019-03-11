@@ -5,6 +5,9 @@
         
                                  <div class="proSercjResult">
                             <asp:GridView ID="catgrySerchResultGridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="catgrySerchResultGridView1_SelectedIndexChanged1">
+                                <Columns>
+                                    <asp:HyperLinkField DataNavigateUrlFields="proID" DataNavigateUrlFormatString="Product_detaile.aspx?id={0}" DataTextField="proName" Text="proName" />
+                                </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                                 <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -16,7 +19,10 @@
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
                         </div>
+    <div>
 
+
+    </div>
         
     
 </asp:Content>

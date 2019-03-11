@@ -9,6 +9,7 @@ using System.Web;
 /// </summary>
 public class Order:MainTable
 {
+    database_hundler db = new database_hundler();
     private string _orderdate;
     private string _shipname;
     private string _shipcity;

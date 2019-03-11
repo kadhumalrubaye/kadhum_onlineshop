@@ -51,9 +51,14 @@
         </tr>
     </table>
     <div>
-                        
+                           <% youshouldbuye.Visible = false; %>  
+
+                   <%if (Session["user"] == null) { Button2.Visible = false; youshouldbuye.Visible = true; } %>  
             
-        <asp:Button ID="Button2" runat="server" Text="Button"  PostBackUrl="~/CartPage.aspx"/>
+        <asp:Button ID="Button2" runat="server" Text="buy"  PostBackUrl="~/CartPage.aspx"/>
+        <asp:Label ID="youshouldbuye" runat="server" Text="you should login to buye this product" BackColor="Red" Font-Size="Large" />
+                      
+
                         
             
     </div>

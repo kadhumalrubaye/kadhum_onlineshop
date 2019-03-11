@@ -10,6 +10,7 @@ using System.Web;
 /// </summary>
 public class Product:MainTable
 {
+    database_hundler db;
     private string _catno;
     private string _proImg;
     private string _proid;
@@ -139,6 +140,7 @@ public class Product:MainTable
 
     public Product()
 	{
+        db = new database_hundler();
 		//
 		// TODO: Add constructor logic here
 		//
@@ -162,7 +164,7 @@ public class Product:MainTable
 
 
         procedureName = "ManageProduct";
-      if(  db.RunProcedure(procedureName, sL)==1) return true;
+      if(db.RunProcedure(procedureName, sL)==1) return true;
       else  return false;
 
     }

@@ -41,12 +41,16 @@ public partial class adminCategory : System.Web.UI.Page
 
     protected void saveButton1_Click(object sender, EventArgs e)
     {
-       saveButton1.Text =search.addCat(catNameTxt.Text ,catNoTextBox1.Text,catDecTextBox3.Text);
-        if (catFileUpload1.HasFile)
-        {
-            string filEx = System.IO.Path.GetExtension(catFileUpload1.PostedFile.FileName);
-            catFileUpload1.SaveAs(Server.MapPath("caTimags")+"\\"+catNameTxt.Text+filEx);
-        }
+        //search.CatDescription = catDecTextBox3.Text;
+        //search.CatName=catNameTxt.Text;
+        Label1.Text = search.addCat(catNameTxt.Text, catDecTextBox3.Text);
+
+        //if (catFileUpload1.HasFile)
+        //{
+        //    string filEx = System.IO.Path.GetExtension(catFileUpload1.PostedFile.FileName);
+        //    catFileUpload1.SaveAs(Server.MapPath("caTimags")+"\\"+catNameTxt.Text+filEx);
+        //}
 
     }
+    
 }
